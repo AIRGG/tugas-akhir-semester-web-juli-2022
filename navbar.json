@@ -1,0 +1,25 @@
+[
+    {
+        "name":"Home",
+        "url":"#home"
+    },
+    {
+        "name":"Features",
+        "url":"#features"
+    },
+    {
+        "name":"Download",
+        "url":"#download"
+    },
+    {
+        "name":"News",
+        "url":"#news"
+    },
+    {
+        "name":"Contact",
+        "url":"#footer"
+    }
+]
+
+
+

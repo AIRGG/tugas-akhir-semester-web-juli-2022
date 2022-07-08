@@ -1,0 +1,21 @@
+[
+    {
+        "name":"Home",
+        "url":"#home"
+    },
+    {
+        "name":"Features",
+        "url":"#features"
+    },
+    {
+        "name":"Download",
+        "url":"#download"
+    },
+    {
+        "name":"Contact",
+        "url":"#footer"
+    }
+]
+
+
+
