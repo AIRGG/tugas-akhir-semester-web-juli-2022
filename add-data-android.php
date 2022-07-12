@@ -4,8 +4,12 @@ if (isset($_POST["save"])) {
     $form_author = $_POST['author'];
     $form_judul = $_POST['judul'];
     $form_link = $_POST['link'];
-    $form_urlimg = $_POST['urlimg'];
-    $form_tgl = $_POST['tgl'];
+    // $form_urlimg = $_POST['urlimg'];
+    $form_urlimg = 'https://picsum.photos/400/300?t'.strval(date("YmdHis"));
+    // $form_tgl = $_POST['tgl'];
+    $date   = new DateTime(); //this returns the current date time
+    $form_tgl = $date->format('Y-m-d');
+    
     
     // sesuain
     $sql = "INSERT INTO `tbl_news`(`author`, `title`, `url`, `urlToImage`, `publishedAt`) VALUES (?,?,?,?,?)";

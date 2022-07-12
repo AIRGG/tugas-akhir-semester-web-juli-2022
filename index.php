@@ -1,3 +1,8 @@
+<?php
+include('config/lib.php');
+$sql = "SELECT * FROM tbl_news";
+$q = show($sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -169,7 +174,22 @@
         </div>
 
         <div class="box-container" id="latestnews">
+            <?php
+            foreach($q as $data => $v):
+            ?>
+            
             <div class="box" style="height: 30rem;">
+                <img style="width: 100%; height: 50%" src="<?= $v['urlToImage'] ?>">
+
+                <h3><?= $v['author'] ?></h3>
+                <p><?= $v['title'] ?></p>
+                <a target="_blank" href="<?= $v['url'] ?>" class="all-btn">Read More..</a>
+            </div>
+            <?php
+            endforeach;
+            ?>
+
+            <!-- <div class="box" style="height: 30rem;">
                 <img style="width: 100%; height: 30%" src="images/logo-opera.svg">
 
                 <h3>CNN Indonesia</h3>
@@ -183,15 +203,7 @@
                 <h3>CNN Indonesia</h3>
                 <p>Kamera Depan iPhone 14</p>
                 <a href="https://www.cnnindonesia.com/teknologi/20220615091727-185-809130/kamera-depan-iphone-14-diprediksi-punya-autofokus-apa-fungsinya" class="all-btn">Read More..</a>
-            </div>
-
-            <div class="box" style="height: 30rem;">
-                <img style="width: 100%; height: 30%" src="images/logo-opera.svg">
-
-                <h3>CNN Indonesia</h3>
-                <p>Kamera Depan iPhone 14</p>
-                <a href="https://www.cnnindonesia.com/teknologi/20220615091727-185-809130/kamera-depan-iphone-14-diprediksi-punya-autofokus-apa-fungsinya" class="all-btn">Read More..</a>
-            </div>
+            </div> -->
             
             
         </div>
@@ -265,7 +277,7 @@
                     </div>
                     `
                 })
-                $('#latestnews').html(mystr)
+                // $('#latestnews').html(mystr)
             })
             // https://newsapi.org/v2/everything?q=adblock&apiKey=f83775dc07fe405eb4175398d528f01c
 
